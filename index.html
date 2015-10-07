@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Multiply</title>
+        <meta charset="utf-8" />
+
+        <!-- include jquery, bootstrap and our stylesheet -->
+        <!-- <script src="./jquery-1.11.3.min.js"></script> -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet"
+	      type="text/css"
+	      href="bootstrap.css"
+	/>
+
+        <link rel="stylesheet"
+	      type="text/css"
+	      href="styles.css"
+	/>	
+    </head>
+    <body>
+        <div>
+            <h1>Multi.....ply</h1>
+            <p>Practice to power!</p>
+            <!-- <p>Estimate by comparing, whether estimates are
+            <ul>
+            <li>greater than,</li><li>smaller than,</li><li>or equal to the solution.</li> 
+            </ul>
+            </p> -->
+            <p>Put your answer in the field of 'answer'.</p>
+            <p>Otherwise, explore/guess the upper or lower bound.
+            </p>
+        </div>
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text"  id="lower" placeholder="estimated lower bound" class ="input" >
+                <!-- class="form-control" -->
+                <label for="lower">&le;</label>
+            </div>
+            <div class="form-group">
+                &nbsp; <span id ="left">1</span>&nbsp; <label>X</label> &nbsp; <span id ="right">1</span> &nbsp;
+            </div>
+            <div class="form-group">
+                <label for="upper">&le;</label>
+                <input type="text" id="upper"  placeholder="estimated upper bound" class ="input">
+            </div>
+            <div class="form-group">
+                <label for="equal">or =</label>
+                <input type="text" id="equal"  placeholder="answer" class ="input">
+            </div>
+            
+            <!-- <button class="btn btn-default" id="check">check</button> -->
+            <input type="button" id="check" value="check"/>
+        </form>
+        <div id="encouragement">Be courageous, just keep trying...</div>
+        <div>
+            To restart, reload the page.
+        </div>
+        
+        <div class="row">
+            <div class ="col-md-6 guide">
+                <h3 class ="guide">What is "upper bound" of a number?</h3>
+                <p>For a numbe x, any nmuber y greater than x, then y is a upper bound of x.</p>
+                <p>For example, 7 is greater than 5, 7 is a upper bound of 5.</p>
+            </div>
+            <div class="col-md-6 guide">
+                <h3 class ="guide">What is "lower bound" of a number?</h3>
+                <p>For a numbe x, any nmuber y smaller than x, then y is a lower bound of x.</p>
+                <p>For example, 3 is greater than 5, 3 is a lower bound of 5.</p>
+                &nbsp;
+            </div>
+        </div>
+        <div class="guide">
+             <p>If you don't know the exact answer to a problem, often exploring the upper/lower bounds would be helpful
+                in practice, and in getting the eventual answer.
+             </p>
+        </div>
+        <!-- Only load after the page is constructed completely.
+        Otherwise, accessing the last child of the body may noy work. -->
+        <script src="multiply.js"></script>
+    </body>
+</html>
