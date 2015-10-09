@@ -27,11 +27,12 @@ $("#check").click(function () {
     var lower = parseInt($("#lower").val());
     
     if (equal == expected) {
-        // $("#encouragement").html("CORRECT!!! Please try more...");
-        if (confirm("CORRECT!!! Would you try more?")) {
+        $("#encouragement").html('<img id="congrats" src="bravo.GIF" />');
+        setTimeout(function(){
             present();
-            return;
-        } // to improve, to have a button to confirm if continue through Javascript
+        },
+                   5000);
+        return;
     } else if (expected < lower && upper < expected) {
         $("#encouragement").html("Sorry, none of your estimate is correct, please reflect and try again.");
         return;
